@@ -1,5 +1,6 @@
 body {
 background-color: black;
+overflow:hidden;
 }
 
 .main {
@@ -54,7 +55,7 @@ background-color: black;
   display: none;
 	position: relative;
 	top: 165px;
-	left: -185px;
+	left: -212px;
 	float: left;
 	display: none;
 }
