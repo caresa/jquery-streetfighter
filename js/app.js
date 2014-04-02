@@ -1,11 +1,12 @@
 $(document).ready(function() {
-
+  playRyu();
   $('.ryu').hide();
 
-  $( ".logo" ).animate({ opacity: 1, left: "450", height: "toggle" },  2000, function() {    
-    $('.logo').fadeOut('fast').finish();
+  $( ".logo" ).animate({ opacity: 1, left: "450", height: "toggle" },  2000, function() {   
+    $('.logo').fadeOut(4000).finish();
     $('.ryu').show();
     $('.intro').fadeIn(4000);
+
   });
 
  
@@ -40,13 +41,18 @@ $(document).ready(function() {
     if (event.which == 88){
       $('.ryu-cool').hide();
       $('.ryu-ready').show();
+
       // $('.ryu-still').show();
     }
   });
 
 });
 
-
+function playRyu () {
+  $('#ryu')[0].volume = 0.5;
+  $('#ryu')[0].load();
+  $('#ryu')[0].play();
+}
 
 function playHadouken () {
   $('#hadouken-sound')[0].volume = 0.5;
